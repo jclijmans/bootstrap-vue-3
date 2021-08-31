@@ -31,6 +31,7 @@ export default defineUserConfig<DefaultThemeOptions>({
               '/components/FormCheckbox.md',
               '/components/Progress.md',
               '/components/Spinners.md',
+              '/components/Table.md',
             ]
           }
         ]
