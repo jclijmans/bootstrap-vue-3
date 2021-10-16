@@ -24,3 +24,5 @@ export const isFunction = (value: any) => toType(value) === 'function'
 // Only returns true for plain JavaScript objects
 export const isPlainObject = (obj: any) => Object.prototype.toString.call(obj) === '[object Object]'
 export const isArray = (value: any) => Array.isArray(value)
+export const isEvent = (value: any) => value instanceof Event
+export const isDate = (value: any) => value instanceof Date

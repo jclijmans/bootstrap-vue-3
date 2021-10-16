@@ -1,4 +1,5 @@
 import {Slots} from 'vue'
+import {concat} from './array'
 import {isFunction} from './inspect'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -12,4 +13,11 @@ export const normalizeSlot = (name: string, scope = {}, $slots: Slots = {}) => {
   }
   // Note: in Vue 3.x, slots have been unified. No more scoped slots and all slots are exposed as functions
   return slot && isFunction(slot) ? slot(scope) : slot
+}
+
+export const hasNormalizedSlot = (names: string[], $slots: Slots = {}): boolean => {
+  // Ensure names is an array
+  names = concat(names).filter((p) => p)
+  // Returns true if the either a $scopedSlot or $slot exists with the specified name
+  return names.some((name) => $slots[name])
 }

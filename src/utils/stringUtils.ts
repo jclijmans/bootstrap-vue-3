@@ -1,4 +1,9 @@
-import {RX_FIRST_START_SPACE_WORD, RX_LOWER_UPPER, RX_UNDERSCORE} from '../constants/regex'
+import {
+  RX_FIRST_START_SPACE_WORD,
+  RX_LOWER_UPPER,
+  RX_REGEXP_REPLACE,
+  RX_UNDERSCORE,
+} from '../constants/regex'
 import {isArray, isPlainObject, isString, isUndefinedOrNull} from './inspect'
 
 // Convert a value to a string that can be rendered
@@ -22,3 +27,8 @@ export const upperFirst = (str: any): string => {
   str = isString(str) ? str.trim() : String(str)
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
+
+// Escape characters to be used in building a regular expression
+export const escapeRegExp = (str: any): any => str.replace(RX_REGEXP_REPLACE, '\\$&')
+// Remove leading and trailing white space from a string
+export const trim = (str: any): string => toString(str).trim()

@@ -13,3 +13,4 @@ export const defineProperty = (
 
 // Convenience method to create a read-only descriptor
 export const readonlyDescriptor = () => ({enumerable: true, configurable: false, writable: false})
+export const hasOwnProperty = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
