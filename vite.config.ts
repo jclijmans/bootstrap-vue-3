@@ -3,6 +3,7 @@
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import {resolve} from 'path'
+import Icons from 'unplugin-icons/vite'
 
 const config = defineConfig({
   resolve: {
@@ -35,6 +36,7 @@ const config = defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
+    Icons({scale: 1.0, compiler: 'vue3'}),
   ],
 
   server: {

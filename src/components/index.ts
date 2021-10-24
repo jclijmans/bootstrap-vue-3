@@ -48,6 +48,7 @@ import BFormSelectOptionGroup from './BFormSelect/BFormSelectOptionGroup.vue'
 import BFormText from './BForm/BFormText.vue'
 import BFormValidFeedback from './BForm/BFormValidFeedback.vue'
 import BIcon from './BIcon/BIcon.vue'
+import BIcon2 from './BIcon/BIcon2.vue'
 import BIconstack from './BIcon/BIconstack.vue'
 import BImg from './BImg.vue'
 import BInputGroup from './BInputGroup/BInputGroup.vue'
@@ -126,6 +127,7 @@ export default {
   BFormText,
   BFormValidFeedback,
   BIcon,
+  BIcon2,
   BIconstack,
   BImg,
   BInputGroup,
